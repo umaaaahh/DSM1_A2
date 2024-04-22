@@ -3,15 +3,34 @@
         <Title>
             Moshi Moshi
         </Title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js">
+        </script>
     </head>
-    <body background="background - colour">
-        <h1>
+
+    <body style="background-color:rgb(0, 0, 0)">
+        <!-- <h1>
             Hello Mum? <br>
         </h1>
         <h2>
             I'm scared.
-        </h2>
-        <img src="img/happy.jpg" width="500">
+        </h2> -->
+       
+        <img id="skate"src='img/skateboard.jpeg'width="250"onmouseover="this.src='img/key.jpg';"onmouseout="this.src='img/skateboard.jpeg';">
+        <img id="key"src='img/key.jpg'width="250"onmousedown="this.src='img/water.jpeg';"onmouseup="this.src='img/key.jpg';">
+        <img id="water"src='img/water.jpeg'width="200">
+        
+        <script>
+            var sound1= new buzz.sound("sound/skater.mp3");
+            var sound2= new buzz.sound("sound/keys.mp3");
+            var sound3= new buzz.sound("sound/water.mp3");
+
+            window.onload = function(){
+                document.getElementById('skate').addEventListener('mouseover',function () {sound1.play();});
+                document.getElementById('key').addEventListener('mouseover',function () {sound2.play();});
+                document.getElementById('water').addEventListener('mouseover',function () {sound3.play();});
+            }
+        </script>
+        
 
     </body>
 </HTML>
