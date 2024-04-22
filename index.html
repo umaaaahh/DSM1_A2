@@ -20,9 +20,9 @@
         <img id="water"src='img/water.jpeg'width="200">
         
         <script>
-            var sound1= new buzz.sound("sound/skater.mp3");
-            var sound2= new buzz.sound("sound/keys.mp3");
-            var sound3= new buzz.sound("sound/water.mp3");
+            var sound1= new buzz.sound("./sound/skater.mp3");
+            var sound2= new buzz.sound("./sound/keys.mp3");
+            var sound3= new buzz.sound("./sound/water.mp3");
 
             window.onload = function(){
                 document.getElementById('skate').addEventListener('mouseover',function () {sound1.play();});
