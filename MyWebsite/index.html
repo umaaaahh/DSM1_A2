@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>
+            Assignment Draft
+        </title>
+        <style>
+            .row{
+                width:720px;
+                margin: 10px 10px 10px 10px;
+            }
+            .image_container{
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js">
+        </script>
+        
+    </head>
+
+    <body style="background-color: black;">
+        
+        <div class="row">
+            <div class="image_container"><img id="toxic"src='img/toxic chemical.png'width="250" onmousedown="this.src='img/toxic chemical 2.png';"onmouseup="this.src='img/toxic chemical.png';"></div>
+            <div class="image_container"><img id="heart"src='img/heart.png'width="250"onmousedown="this.src='img/heart 2.png';"onmouseup="this.src='img/heart.png';"></div>
+            <div class="image_container"><img id="ufo"src='img/ufo.png'width="250 px"onmousedown="this.src='img/ufo 2.png';"onmouseup="this.src='img/ufo.png';"></div>
+        </div>
+
+        <div class="row">
+            <div class="image_container"><img id="health"src='img/health heart.png'width="250"onmousedown="this.src='img/health heart 2.png';"onmouseup="this.src='img/health heart.png';"></div>
+            <div class="image_container"><img id="man"src='img/man.png'width="250"onmousedown="this.src='img/man 2.png';"onmouseup="this.src='img/man.png';"></div>
+            <div class="image_container"><img id="gun"src='img/gun.png'width="250"onmousedown="this.src='img/gun 2.png';"onmouseup="this.src='img/gun.png';"></div>
+        </div>
+
+        <div class="row">
+            <div class="image_container"><img id="alien"src='img/alien.png'width="250 px"onmousedown="this.src='img/alien 2.png';"onmouseup="this.src='img/alien.png';"></div>
+            <div class="image_container"><img id="aim"src='img/aim.png'width="250 px"onmousedown="this.src='img/aim 2.png';"onmouseup="this.src='img/aim.png';"></div>
+            <div class="image_container"><img id="broken"src='img/broken heart.png'width="250 px"onmousedown="this.src='img/broken heart 2.png';"onmouseup="this.src='img/broken heart.png';"></div>
+        </div>
+       
+            <script>
+                var sound1 = new buzz.sound("./sound/aim.mp3");
+                var sound2 = new buzz.sound("./sound/alien.mp3");
+                var sound3 = new buzz.sound("./sound/broken.mp3");
+                var sound4 = new buzz.sound("./sound/gun.mp3");
+                var sound5 = new buzz.sound("./sound/health.mp3");
+                var sound6 = new buzz.sound("./sound/man.mp3");
+                var sound7 = new buzz.sound("./sound/ufo.mp3");
+                var sound8 = new buzz.sound("./sound/heart.mp3");
+                var sound9 = new buzz.sound("./sound/toxic.mp3");
+
+                    window.onload = function(){
+                        document.getElementById('aim').addEventListener('mousedown',function () {sound1.play();});
+                        document.getElementById('alien').addEventListener('mousedown',function () {sound2.play();});
+                        document.getElementById('broken').addEventListener('mousedown',function () {sound3.play();});
+                        document.getElementById('gun').addEventListener('mousedown',function () {sound4.play();});
+                        document.getElementById('health').addEventListener('mousedown',function () {sound5.play();});
+                        document.getElementById('man').addEventListener('mousedown',function () {sound6.play();});
+                        document.getElementById('ufo').addEventListener('mousedown',function () {sound7.play();});
+                        document.getElementById('heart').addEventListener('mousedown',function () {sound8.play();});
+                        document.getElementById('toxic').addEventListener('mousedown',function () {sound9.play();});
+                    }
+
+            </script>
+
+            
+
+    </body>
+</html>
